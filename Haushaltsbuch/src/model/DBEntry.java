@@ -9,20 +9,115 @@ public class DBEntry {
 	public String Grund;	
 	public String Datum;
 	
+	/**
+	 * 
+	 * @param id
+	 * @param Art
+	 * @param Betrag
+	 * @param Grund
+	 * @param Datum
+	 */
 	public DBEntry(int id, String Art, float Betrag, String Grund, String Datum) {
-		// Die Werte setzen...
 		this.ID = id;
 		this.Art = Art;
 		this.Betrag = Betrag;
 		this.Grund = Grund;
 		this.Datum = Datum;
 	}
-		
+	
+	/**
+	 * 
+	 * @return ID
+	 */
+	public int getID() {
+		return ID;
+	}
+
+	/**
+	 * 
+	 * @param iD
+	 */
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	/**
+	 * 
+	 * @return Art
+	 */
+	public String getArt() {
+		return Art;
+	}
+
+	/**
+	 * 
+	 * @param art
+	 */
+	public void setArt(String art) {
+		Art = art;
+	}
+
+	/**
+	 * 
+	 * @return Betrag
+	 */
+	public float getBetrag() {
+		return Betrag;
+	}
+
+	/**
+	 * 
+	 * @param betrag
+	 */
+	public void setBetrag(float betrag) {
+		Betrag = betrag;
+	}
+
+	/**
+	 * 
+	 * @return Grund
+	 */
+	public String getGrund() {
+		return Grund;
+	}
+
+	/**
+	 * 
+	 * @param grund
+	 */
+	public void setGrund(String grund) {
+		Grund = grund;
+	}
+
+	/**
+	 * 
+	 * @return Datum
+	 */
+	public String getDatum() {
+		return Datum;
+	}
+
+	/**
+	 * 
+	 * @param datum
+	 */
+	public void setDatum(String datum) {
+		Datum = datum;
+	}
+
+
+	/**
+	 * @return this.ID + this.Art + this.Betrag + this.Grund
+	 */
 	@Override
 	public String toString() {
 		return "ID: "+this.ID+" |Art: "+this.Art+ " |Betrag: "+this.Betrag+ " |Grund: "+this.Grund+" |Datum: "+this.Datum;
 	}
-
+	/**
+	 * method for comparing different attributes
+	 * @return true
+	 * @return false
+	 */
 	@Override
 	public boolean equals(Object arg0) {
 		DBEntry xDB = (DBEntry)arg0;
