@@ -16,7 +16,7 @@ public class Datenbank {
 	
 	/**
 	 * Returns the highest ID found in the table
-	 * @return
+	 * @return highestID
 	 */
 	public static int getHighestID(){
 		
@@ -60,7 +60,7 @@ public class Datenbank {
 	
 	/**
 	 * Returns an Arraylist with all DBEntrys found in the Database
-	 * @return
+	 * @return buchungen
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
 	 */
@@ -112,7 +112,7 @@ public class Datenbank {
 	/**
 	 * Inserts all the DBEntrys from an arraylist to the selected Database
 	 * @param contacts
-	 * @return
+	 * @return true
 	 * @throws Exception
 	 */
 	public static boolean commitAllEntrys(ArrayList<DBEntry> buchungen) throws Exception{
@@ -177,7 +177,8 @@ public class Datenbank {
 	/**
 	 * Deletes a selected entry from the Database
 	 * @param dbe
-	 * @return
+	 * @return true
+	 * @return false
 	 */
 	public static boolean deleteSelectedEntry(DBEntry dbe){
 		try{

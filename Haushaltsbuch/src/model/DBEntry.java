@@ -107,6 +107,7 @@ public class DBEntry {
 
 
 	/**
+	 * toString method for the output
 	 * @return this.ID + this.Art + this.Betrag + this.Grund
 	 */
 	@Override
