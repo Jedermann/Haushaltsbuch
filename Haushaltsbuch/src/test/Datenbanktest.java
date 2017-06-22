@@ -31,6 +31,9 @@ public class Datenbanktest {
 	public void tearDown() throws Exception {
 	}	
 	
+	/**
+	 * testcase for getting the highest ID 
+	 */
 	@Test
 	public void testGetHighestID(){
 		try{
@@ -42,6 +45,9 @@ public class Datenbanktest {
 		}
 	}
 	
+	/**
+	 * testcase for getting all entries
+	 */
 	@Test
 	public void testGetEntryList() {
 		try{
@@ -53,7 +59,9 @@ public class Datenbanktest {
 		}
 		
 	}
-	
+	/**
+	 * testcase for testing the insert and remove
+	 */
 	@Test
 	public void testInserAndRemove(){
 		try{
@@ -68,6 +76,9 @@ public class Datenbanktest {
 		}
 	}
 	
+	/**
+	 * testcase for selecting and commiting
+	 */
 	@Test
 	public void testSelectAndCommit(){
 		try{
