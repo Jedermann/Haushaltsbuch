@@ -268,6 +268,9 @@ public class Eintrag_Tabelle extends JFrame {
 		btnLoeschen.setForeground(Color.WHITE);
 		btnLoeschen.addActionListener(new ActionListener() {
 			
+			/**
+			 * actionPerformed method for getting the attributes out of table
+			 */
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
@@ -327,6 +330,9 @@ public class Eintrag_Tabelle extends JFrame {
 		refreshTable();
 	}
 	
+	/**
+	 * refreshTable method to add the attributes to the table
+	 */
 	public void refreshTable(){
 	    try {
 	        try {
@@ -351,9 +357,7 @@ public class Eintrag_Tabelle extends JFrame {
 
 	}
 		
-	/**
-	 * 
-	 */
+	
 	public class UebernehmenListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
@@ -400,49 +404,72 @@ public class Eintrag_Tabelle extends JFrame {
 		}
 	}
 	
-	
+	/**
+	 * sortDatum method to sort the Datum-String
+	 */
 	public void sortDatum(){
 		Collections.sort(buchungen,new DatumComperator());
 		refreshTable();
 		System.out.println("Datum comparator");
 	}
 	
+	/**
+	 * sortArt method to sort the Art-String
+	 */
 	public void sortArt(){
 		Collections.sort(buchungen,new ArtComperator());
 		refreshTable();
 		System.out.println("Art comparator");
 	}
 	
+	/**
+	 * sortBetrag method to sort the Betrag-Float
+	 */
 	public void sortBetrag(){
 		Collections.sort(buchungen,new BetragComperator());
 		refreshTable();
 		System.out.println("Betrag comparator");
 	}
 	
+	/**
+	 * sortGrund method to sort the Grund-String
+	 */
 	public void sortGrund(){
 		Collections.sort(buchungen,new GrundComperator());
 		refreshTable();
 		System.out.println("Grund comparator");
 	}
 	
+	/**
+	 * sortDatumDesc method to sort the Datum String descending
+	 */
 	public void sortDatumDesc(){
 		Collections.sort(buchungen,new DatumComperatorDesc());
 		refreshTable();
 		System.out.println("Datum comparator Desc");
 	}
 	
+	/**
+	 * sortArtDesc method to sort the Art-String descending
+	 */
 	public void sortArtDesc(){
 		Collections.sort(buchungen,new ArtComperatorDesc());
 		refreshTable();
 		System.out.println("Art comparator Desc");
 	}
 	
+	/**
+	 * sortBetragDesc method to sort the Betrag-Float descending
+	 */
 	public void sortBetragDesc(){
 		Collections.sort(buchungen,new BetragComperatorDesc());
 		refreshTable();
 		System.out.println("Betrag comparator Desc");
 	}
 	
+	/**
+	 * sortGrundDesc method to sort the Grund-String descending
+	 */
 	public void sortGrundDesc(){
 		Collections.sort(buchungen,new GrundComperatorDesc());
 		refreshTable();
